@@ -1,0 +1,50 @@
+{
+  "build": {
+    "beforeDevCommand": "pnpm dev",
+    "beforeBuildCommand": "pnpm build",
+    "devPath": "http://localhost:14200",
+    "distDir": "../dist"
+  },
+  "package": {
+    "productName": "金多多短信充值中台",
+    "version": "0.0.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "shell": {
+        "all": false,
+        "open": true
+      }
+    },
+    "windows": [
+      {
+        "title": "金多多短信充值中台 ",
+        "width": 800,
+        "height": 600
+      }
+    ],
+    "security": {
+      "csp": null
+    },
+    "bundle": {
+
+      "windows": {
+        "wix": {
+          "language": "zh-CN"
+        }
+      },
+
+      "active": true,
+      "targets": "all",
+      "identifier": "com.jindd.app.sms",
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ]
+    }
+  }
+}
